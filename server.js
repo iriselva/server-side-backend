@@ -8,7 +8,6 @@ const mongodb = require('mongodb')
 const MongoClient = mongodb.MongoClient;
 const uri = process.env.MONGODB_URI;
 
-console.log('JOJO',uri, port)
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
 const bodyParser = require('body-parser')
@@ -33,7 +32,7 @@ app.get('/project/types', (req,res)=>{
 
 app.get('/projects', (req,res)=>{
     client.connect(async err => {
-        console.log('HALLLO IRIS!')
+        console.log('HALLLO IRIS2!')
         try {
             
             const collection = client.db("test").collection("projects");
