@@ -42,7 +42,7 @@ app.get('/projects', (req,res)=>{
             res.send(JSON.stringify(data));
         } catch(e) {
             console.log(e);
-            res.send('FAIL!')
+            res.send(JSON.stringify(e))
         }
       });
 })
