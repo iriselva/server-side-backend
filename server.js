@@ -3,13 +3,10 @@ const app = require('express')();
 //requiering the cors middleware:
 const cors = require('cors');
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 5000;
-}
+const port = process.env.PORT;
 const mongodb = require('mongodb')
 const MongoClient = mongodb.MongoClient;
-const uri = "mongodb+srv://iriselva:Vefthrounbakendi3@cluster0.qjdyc.mongodb.net/test?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
 const bodyParser = require('body-parser')
