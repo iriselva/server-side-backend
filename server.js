@@ -43,6 +43,7 @@ app.get('/project/types', (req,res)=>{
 
 app.get('/projects', (req,res)=>{
     client.connect(async err => {
+        console.log('HALLLO IRIS!')
         const collection = client.db("test").collection("projects");
         const data = await collection.find().toArray();
 
