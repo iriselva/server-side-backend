@@ -19,16 +19,7 @@ const jsonParser = bodyParser.json()
 app.use(cors());//telling express to use the cors middleware
 
 app.get('/', (req,res)=>{ //listen to a get request
-  client.connect(async err => {
-    const collection = client.db("test").collection("devices");
-    //perform actions on the collection object
-    //find everything in the collection and turn it into an array:
-    const data = await collection.find().toArray();
-    
-    //now we turn our data into a string and send it over to the client
-    //remember that our data is an array of objects (in this case only one object) but JSON.stringify turns it into a string 
-    res.send(JSON.stringify(data));
-  });
+    res.send('Welcome to server side knitting!');
 })
 
 app.get('/project/types', (req,res)=>{ 
