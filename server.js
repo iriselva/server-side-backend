@@ -3,8 +3,10 @@ const app = require('express')();
 //requiering the cors middleware:
 const cors = require('cors');
 
-const PORT = 5000; //we will use port 5000
-
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 5000;
+}
 const mongodb = require('mongodb')
 const MongoClient = mongodb.MongoClient;
 const uri = "mongodb+srv://iriselva:Vefthrounbakendi3@cluster0.qjdyc.mongodb.net/test?retryWrites=true&w=majority";
@@ -75,7 +77,7 @@ app.delete('/projects/:id', (req, res)=> {
     });
 })
   
-app.listen(PORT, ()=>{ //listen to the port we chose above
+app.listen(port, ()=>{ //listen to the port we chose above
     //print to the console that the server is listening
     console.log("listening to port: " + PORT);
 })
