@@ -8,11 +8,12 @@ In the application you can add a object/project to the database through a form. 
 
 The inspiration for this web application is to have a place to keep all of your knitting projects at one place. Often knitters make a lot of gifts and items and it would be nice for them to have a place to see and remember all of their creations. In the future I would like to add routing and more elements to the form. For expample to upload a photo, to write a description, have a start and finishing dates with inprogress bar and so much more!
 
-This web app only has some only basic styling as it's purpose is to learn more about the backend. Hopefully that will be upgraded in the future.
+This web app only has some only basic styling as it's purpose is to learn more about the backend. Hopefully it will be upgraded in the future.
 
 I hope you like it!
 
 ## Files
++ [Frontend git repository](https://github.com/iriselva/server-side-frontend)
 + [Server.js](server.js) with comments
 + [Heroku API](https://server-side-knitting.herokuapp.com/)
 + [API Projects endpoint](https://server-side-knitting.herokuapp.com/projects)
