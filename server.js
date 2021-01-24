@@ -79,5 +79,5 @@ app.delete('/projects/:id', (req, res)=> {
   
 app.listen(port, ()=>{ //listen to the port we chose above
     //print to the console that the server is listening
-    console.log("listening to port: " + PORT);
+    console.log("listening to port: " + port);
 })
